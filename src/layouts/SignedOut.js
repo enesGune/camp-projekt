@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Menu } from "semantic-ui-react";
 
-export default function SignedOut(props) {
+export default function SignedOut(singIn) {
   return (
     <div>
       <Menu.Item>
-        <Button onClick={props.singIn} dark>
+        <Button onClick={singIn} dark>
           Giriş Yap
         </Button>
         <Button dark style={{ marginLeft: "0.5em" }}>

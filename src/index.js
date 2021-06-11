@@ -1,15 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   // <React.StrictMode> alt kısımda app  comp root a yerleştir dedik root ise publicde html de root kısmına attık
+  <BrowserRouter>
     <App />
-  // </React.StrictMode> bu bir statik mod kısmı  
-  ,
-  document.getElementById('root')
+  </BrowserRouter>,
+
+  // </React.StrictMode> bu bir statik mod kısmı
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

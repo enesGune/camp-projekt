@@ -6,7 +6,7 @@ import SingnedIn from "./SingnedIn";
 import { useState } from "react";
 
 export default function Navi() {
-  const [isAuthentication, setAuthenticaded] = useState(true);
+  const [isAuthentication, setAuthenticaded] = useState(false);
   function handleSignOut(params) {
     setAuthenticaded(false);
   }

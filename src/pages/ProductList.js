@@ -9,7 +9,7 @@ export default function ProductList() {
   useEffect(() => {
     let productSevice = new ProductSevice();
     productSevice.getProducts().then((result) => setPosts(result.data));
-  });
+  }, []);
   return (
     <div>
       <Table celled>
@@ -20,7 +20,7 @@ export default function ProductList() {
             <Table.HeaderCell>Body</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
-
+        {/* aşağıda javascript kodu yazdık ve bu kısmı veri tabanı ile çağrışıtrdık */}
         <Table.Body>
           {posts.map((post) => (
             <Table.Row key={post.userId}>

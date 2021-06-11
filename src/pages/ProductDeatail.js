@@ -1,9 +1,7 @@
 import React from "react";
+import { useParams } from "react-router";
 
 export default function ProductDeatail() {
-  return (
-    <div>
-      <p>Detay sayfası</p>
-    </div>
-  );
+  let { id } = useParams();
+  return <div>ürün: {id}</div>;
 }

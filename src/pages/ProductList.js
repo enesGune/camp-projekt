@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Icon, Menu, Table } from "semantic-ui-react";
 import ProductSevice from "../services/ProductService";
 
@@ -24,8 +25,12 @@ export default function ProductList() {
         <Table.Body>
           {posts.map((post) => (
             <Table.Row key={post.userId}>
-              <Table.Cell>{post.id}</Table.Cell>
-              <Table.Cell>{post.title}</Table.Cell>
+              <Table.Cell>
+                <Link to={"/product/" + post.id}>{post.id}</Link>
+              </Table.Cell>
+              <Table.Cell>
+                <Link to={"/product/" + post.id}>{post.title}</Link>
+              </Table.Cell>
               <Table.Cell>{post.body}</Table.Cell>
             </Table.Row>
           ))}

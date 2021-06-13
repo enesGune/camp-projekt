@@ -29,7 +29,7 @@ export default function ProductList() {
                 <Link to={"/product/" + post.id}>{post.id}</Link>
               </Table.Cell>
               <Table.Cell>
-                <Link to={"/product/" + post.id}>{post.title}</Link>
+                <Link to={"/product/" + post.body}>{post.title}</Link>
               </Table.Cell>
               <Table.Cell>{post.body}</Table.Cell>
             </Table.Row>

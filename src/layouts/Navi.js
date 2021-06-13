@@ -4,11 +4,14 @@ import { Container, Menu } from "semantic-ui-react";
 import SignedOut from "./SignedOut";
 import SingnedIn from "./SingnedIn";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 export default function Navi() {
   const [isAuthentication, setAuthenticaded] = useState(false);
+  const history = useHistory();
   function handleSignOut(params) {
     setAuthenticaded(false);
+    history.push("/") // bu şekilde biz herhangi bir yerde iken çıkış yaparsak oto olarak anasayfaya yönlendiriyor
   }
   function handleSignIn(params) {
     setAuthenticaded(true);

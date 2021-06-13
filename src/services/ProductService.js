@@ -5,4 +5,8 @@ export default class ProductSevice {
     return axios.get("https://jsonplaceholder.typicode.com/posts");
     // şuan apiye axios ile sorgu atıyoruz 2:37
   }
+
+  getProductsId(id) {
+    return axios.get("https://jsonplaceholder.typicode.com/posts/" + id);
+  }
 }

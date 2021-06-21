@@ -1,1 +1,1 @@
-export const cartItems = [{ quantity: 1, post: { postName: "Çubuk Kıraker" } }]
+export const cartItems = []
